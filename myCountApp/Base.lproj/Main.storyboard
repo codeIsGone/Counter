@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myCountApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pa-dO-KcM">
+                                <rect key="frame" x="191" y="415.66666666666669" width="11" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzH-rK-b5v">
+                                <rect key="frame" x="169.66666666666666" y="364.66666666666669" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="감소"/>
+                                <connections>
+                                    <action selector="touchedValueDownButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="03g-VY-Xen"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3K-Wd-OPQ">
+                                <rect key="frame" x="169.66666666666666" y="452.66666666666669" width="54" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="증가"/>
+                                <connections>
+                                    <action selector="touchedValueUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ddh-DQ-B4s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="g3K-Wd-OPQ" firstAttribute="top" secondItem="0pa-dO-KcM" secondAttribute="bottom" constant="16" id="Mtc-le-N5U"/>
+                            <constraint firstItem="0pa-dO-KcM" firstAttribute="top" secondItem="mzH-rK-b5v" secondAttribute="bottom" constant="16" id="SJD-U4-iHm"/>
+                            <constraint firstItem="0pa-dO-KcM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="U6u-F0-Z7P"/>
+                            <constraint firstItem="0pa-dO-KcM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YVV-yG-se4"/>
+                            <constraint firstItem="mzH-rK-b5v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blU-La-zbC"/>
+                            <constraint firstItem="g3K-Wd-OPQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qIg-tU-zpd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countValueLabel" destination="0pa-dO-KcM" id="euc-X6-sLJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
